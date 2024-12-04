@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebFinances</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+    <h1>WebFinances</h1>
+    <form id="formFinanceiro">
+        <label for="descricao">Descrição:</label>
+        <input type="text" id="descricao" required>
+
+        <label for="categoria">Categoria:</label>
+        <select id="categoria" required>
+            <option value="Receita">Receita</option>
+            <option value="Despesa">Despesa</option>
+        </select>
+
+        <label for="data">Data:</label>
+        <input type="date" id="data" required>
+
+        <label for="valor">Valor:</label>
+        <input type="number" step="0.01" id="valor" required>
+
+        <button type="submit">Adicionar Transação</button>
+    </form>
+
+    <h2>Lista de Transações</h2>
+    <ul id="listaTransacoes"></ul>
+
+    <h2>Resumo Financeiro</h2>
+    <div id="resumo">
+        <p>Total de Receitas: <span id="totalReceitas">R$ 0,00</span></p>
+        <p>Total de Despesas: <span id="totalDespesas">R$ 0,00</span></p>
+        <p>Saldo Final: <span id="saldoFinal">R$ 0,00</span></p>
+    </div>
+
+    <script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
